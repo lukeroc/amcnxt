@@ -46,6 +46,7 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#ffcc00' },
+  plugins: ['~/directives/scroll-fire.js'],
   /*
   ** Build configuration
   */
