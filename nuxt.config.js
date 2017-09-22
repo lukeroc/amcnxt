@@ -53,6 +53,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+    vendor: ['vue-carousel'],
     extend (config, ctx) {
       if (ctx.dev && ctx.isClient) {
         config.module.rules.push({
