@@ -24,7 +24,7 @@ export default {
 
 <style>
 .container {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,14 +35,15 @@ export default {
   font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 42px;
   color: #35495e;
   letter-spacing: 1px;
+  margin: 16px 0 4px;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
+  font-size: 24px;
   color: #526488;
   word-spacing: 5px;
   padding-bottom: 15px;
