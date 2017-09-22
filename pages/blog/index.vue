@@ -123,28 +123,9 @@
   </a-article>
 </template>
 
-<style lang="scss">
-.image-content {
-  &.robots {
-    width: 100%;
-    padding: 32px 0 0;
-    text-align: center;
-
-    @media (min-width: 920px) {
-      float: right;
-      width: 480px;
-      padding: 32px 0 32px 32px;
-    }
-
-    @media (min-width: 1366px) {
-      width: 555px;
-    }
-  }
-}
-</style>
-
 <script>
 import { aArticle } from '~/components/amico/aArticle'
+
 export default {
   components: {
     aArticle
@@ -189,3 +170,23 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.image-content {
+  &.robots {
+    width: 100%;
+    padding: 32px 0 0;
+    text-align: center;
+
+    @media (min-width: 920px) {
+      float: right;
+      width: 480px;
+      padding: 32px 0 32px 32px;
+    }
+
+    @media (min-width: 1366px) {
+      width: 555px;
+    }
+  }
+}
+</style>
