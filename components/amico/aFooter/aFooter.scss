@@ -36,13 +36,6 @@
       padding-bottom: 20px;
       height: 40px;
       text-align: center;
-
-      // .copyright {
-      //   position: absolute;
-      //   bottom: 0;
-      //   left: 50%;
-      //   transform: translateX(-50%);
-      // }
     }
 
     @include MQ(MD) {
@@ -53,7 +46,7 @@
     .a-logo {
       margin: 0 0 12px;
       width: 100%;
-      max-width: 158px;
+      width: 158px;
 
       svg {
         width: 100%;

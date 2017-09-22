@@ -5,9 +5,7 @@
         <div class="footer-column">
           <div class="a-logo">
             <nuxt-link to="/">
-              <nuxt-link to="/">
-                <img src="~/static/images/logo-secondary.svg" alt="amico.ai logo">
-              </nuxt-link>
+              <img src="~/static/images/logo-secondary.svg" alt="amico.ai logo">
             </nuxt-link>
           </div>
           <p class="x-small copyright hidden-mobile" style="margin-top: 14px;">© 2017 Amico.ai</p>
