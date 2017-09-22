@@ -1,6 +1,6 @@
 // ===== IMPORTS ======================
-@import '../../../../scss/base/variables';
-@import '../../../../scss/base/mixins/all';
+@import '../../../assets/scss/base/variables';
+@import '../../../assets/scss/base/mixins/all';
 
 
 // MENU
@@ -33,10 +33,10 @@
   }
 
   .a-logo {
-    max-width: 130px;
+    width: 130px;
 
     @include MQ(MD) {
-      max-width: 158px;
+      width: 158px;
     }
 
     svg {
