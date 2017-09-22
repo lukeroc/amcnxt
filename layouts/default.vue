@@ -1,10 +1,21 @@
 <template>
   <div>
+    <div class="a-menu">
+      <div class="a-logo">
+        <nuxt-link to="/">Logo</nuxt-link>
+      </div>
+      <nav class="a-menu-links">
+        <nuxt-link class="a-menu-link" :to="{name: 'careers'}">Careers</nuxt-link>
+        <nuxt-link class="a-menu-link" :to="{name: 'press'}">Press</nuxt-link>
+        <nuxt-link class="a-menu-link" :to="{name: 'blog'}">Blog</nuxt-link>
+      </nav>
+    </div>
+
     <nuxt/>
   </div>
 </template>
 
-<style>
+<style lang="scss">
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
@@ -21,32 +32,31 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
+.a-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 64px;
+  padding: 0 32px;
+  background: #e3e3e3;
 
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
+  .a-menu-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
+    .a-menu-link {
+      margin: 0 16px;
 
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
 }
 </style>
