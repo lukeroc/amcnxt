@@ -3,20 +3,49 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'amcnxt',
+    title: 'Meet Amico - Your New AI Friend',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' }
+      {
+        hid: 'metaDescription',
+        name: 'description',
+        content: 'Hi there. I am Amico, your new AI friend. Are you up for a chat? Visit my website to learn more and start talking to an AI 😊'
+      },
+      {
+        hid: 'ogTitle',
+        property: 'og:title',
+        content: 'Meet Amico - Your New AI Friend'
+      },
+      {
+        hid: 'ogDescription',
+        property: 'og:description',
+        content: 'Hi there. I am Amico, your new AI friend. Are you up for a chat? Visit my website to learn more and start talking to an AI 😊'
+      },
+      {
+        hid: 'ogUrl',
+        property: 'og:url',
+        content: 'https://www.amico.ai'
+      },
+      {
+        hid: 'ogImage',
+        property: 'og:image',
+        content: 'https://amico.ai/static/images/social-site.png'
+      },
+      {
+        hid: 'ogImageAlt',
+        property: 'og:image:alt',
+        content: 'Amico.ai Site Welcome Image'
+      }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'canonical', href: 'https://www.amico.ai' }
     ]
   },
   /*
   ** Customize the progress bar color
   */
-  loading: { color: '#3B8070' },
+  loading: { color: '#ffcc00' },
   /*
   ** Build configuration
   */
