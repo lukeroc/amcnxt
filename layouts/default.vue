@@ -1,5 +1,5 @@
 <template>
-  <section class="a-home-wrapper">
+  <section class="a-app">
     <a-header></a-header>
     <nuxt/>
     <a-footer></a-footer>
