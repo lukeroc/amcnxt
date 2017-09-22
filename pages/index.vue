@@ -3,15 +3,11 @@
     <div>
       <logo/>
       <h1 class="title">
-        amcnxt
+        Amico.ai - the Nuxt.js version
       </h1>
       <h2 class="subtitle">
-        Nuxt.js project
+        Gracefully converting Amico.ai to a Nuxt.js project
       </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">Documentation</a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">GitHub</a>
-      </div>
     </div>
   </section>
 </template>
