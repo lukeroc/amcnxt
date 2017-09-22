@@ -1,0 +1,98 @@
+// MAIN CONTENT
+.a-content {
+  @include MQ(MD) {
+    min-height: calc(100vh - 282px);
+    padding-top: 90px;
+  }
+}
+
+// CONTENT
+.content {
+  padding: 40px 0;
+  background: $color-light;
+
+  &.alternate-content {
+    background: $color-medium;
+  }
+
+  &.content-bottom-space {
+    padding: 0 0 40px;
+  }
+
+  &.content-top-space {
+    padding: 40px 0 0;
+  }
+}
+
+// SPLIT CONTENT
+.split-content {
+  @include MQ(MD) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 600px;
+  }
+
+  .text-content,
+  .image-content {
+    @include MQ(MD) {
+      flex-basis: 50%;
+      padding: 0 20px;
+    }
+
+    @include MQ(LG) {
+      padding: 0 24px;
+    }
+
+    @include MQ(XL) {
+      padding: 0 30px;
+    }
+  }
+
+  .text-content {
+    margin-bottom: 32px;
+
+    @include MQ(MD) {
+      margin: 0;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+  }
+
+  .image-content {
+    text-align: center;
+  }
+}
+
+// CONTAINED CONTENT
+.contained-content {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 920px;
+  padding: 0 16px;
+
+  @include MQ(LG) {
+    max-width: 1024px;
+  }
+
+  @include MQ(XL) {
+    max-width: 1140px;
+  }
+}
+
+// CONTENT HEADER
+.content-header {
+  display: flex;
+}
+
+// SEPARATOR
+hr {
+  margin: 24px 0;
+  width: 85px;
+  height: 3px;
+  background: $color-primary;
+  border: none;
+}

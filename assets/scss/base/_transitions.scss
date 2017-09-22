@@ -1,0 +1,88 @@
+// ===== FADE IN ======================
+.fade-in-enter-active,
+.fade-in-leave-active {
+  transition: opacity 280ms !important;
+}
+
+.fade-in-enter,
+.fade-in-leave-to {
+  opacity: 0 !important;
+}
+
+.fade-in-leave,
+.fade-in-enter-to {
+  opacity: 1 !important;
+}
+
+// ===== SLIDE IN RIGHT ===============
+.slide-in-right-enter-active,
+.slide-in-right-leave-active {
+  transition: transform 200ms !important;
+}
+
+.slide-in-right-enter,
+.slide-in-right-leave-to {
+  transform: translateX(102%) !important;
+}
+
+.slide-in-right-leave,
+.slide-in-right-enter-to {
+  transform: translateX(0) !important;
+}
+
+// ===== SLIDE IN DOWN ===============
+.slide-in-down-enter-active,
+.slide-in-down-leave-active {
+  transition: transform 300ms !important; // cubic-bezier(1.0, 0.5, 0.8, 1.0)
+}
+
+.slide-in-down-enter,
+.slide-in-down-leave-to {
+  transform: translateY(-180px);
+}
+
+.slide-in-down-leave,
+.slide-in-down-enter-to {
+  transform: translateY(0);
+}
+
+
+// ===== FADE IN UP ===================
+.animated {
+  animation-duration: 1000ms;
+  animation-fill-mode: both;
+  animation-timing-function: ease;
+  will-change: transform, opacity;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 120px, 0); // 10em
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUpImage {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10em, 0); // 10em
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInUpImage {
+  animation-name: fadeInUpImage;
+}

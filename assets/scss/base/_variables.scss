@@ -1,0 +1,37 @@
+// ======= COLORS =====================
+$color-primary: #ffd400;
+$color-primary-tint: #ffdc00;
+$color-primary-shade: #ffcc00;
+$color-primary-gradient: linear-gradient(90deg, $color-primary-tint, $color-primary-shade);
+$color-secondary: #0099ff;
+$color-secondary-tint: #00aeff;
+$color-secondary-shade: #0090ff;
+$color-secondary-gradient: linear-gradient(90deg, $color-secondary-tint, $color-secondary-shade);
+$color-dark: #505050;
+$color-medium: #f7f8fa;
+$color-light: #ffffff;
+
+
+// ======= TYPOGRAPY ==================
+$primary-font: 'chronica-pro', sans-serif !default;
+$secondary-font: 'tt-norms', sans-serif !default;
+$icon-font: 'icomoon' !default;
+$font-color-primary: $color-dark;
+
+
+// ======= BREAKPOINTS ================
+$XS: 360px;
+$SM: 640px;
+$MD: 920px;
+$LG: 1184px;
+$XL: 1366px;
+$MG: 1680px;
+
+
+// ======= SCROLLBAR ==================
+$scrollbar-width: 5px;
+$scrollbar-height: 2px;
+/*$scrollbar-track-background: #2a2a2a;
+$scrollbar-thumb-background: #202020;*/
+$scrollbar-track-background: $color-medium;
+$scrollbar-thumb-background: $color-dark;

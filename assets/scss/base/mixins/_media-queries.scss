@@ -1,0 +1,21 @@
+// ======= MEDIA QUERIES ==============
+@mixin MQ($canvas) {
+  @if $canvas == XS {
+    @media (min-width: $XS) { @content; }
+  }
+  @else if $canvas == SM {
+    @media (min-width: $SM) { @content; }
+  }
+  @else if $canvas == MD {
+    @media (min-width: $MD) { @content; }
+  }
+  @else if $canvas == LG {
+    @media (min-width: $LG) { @content; }
+  }
+  @else if $canvas == XL {
+    @media (min-width: $XL) { @content; }
+  }
+  @else if $canvas == MG {
+    @media (min-width: $MG) { @content; }
+  }
+}

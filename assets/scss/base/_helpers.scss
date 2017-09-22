@@ -1,0 +1,97 @@
+// ======= VISIBILITY =================
+.visible {
+  @include visible;
+}
+
+.invisible {
+  @include invisible;
+}
+
+.is-transparent {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.is-opaque {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+.is-ontop {
+  z-index: 10;
+}
+
+.hidden-mobile {
+  @media (max-width: 919px) {
+    display: none !important;
+  }
+}
+
+.hidden-desktop {
+  @media (min-width: 920px) {
+    display: none !important;
+  }
+}
+
+// ======= SIZING =====================
+@for $i from 1 through 24 {
+  $size: $i * 8;
+
+  .is-#{$size}x#{$size} {
+    width: #{$size}px;
+    height: #{$size}px;
+  }
+}
+
+// ======= TEXT ALIGNMNET =============
+.a-text-left {
+  text-align: left;
+}
+
+.a-text-center {
+  text-align: center;
+}
+
+.a-text-right {
+  text-align: right;
+}
+
+// ======= OVERFLOW ===================
+.no-overflow {
+  overflow: hidden !important;
+}
+
+.v-overflow {
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.is-circle {
+  border-radius: 50% !important;
+}
+
+// ======= FONT WEIGHT ================
+.a-text-medium {
+  font-weight: 500 !important;
+}
+
+.strong {
+  font-weight: 700;
+}
+
+// ======= COLORS =====================
+.a-success {
+  background: #659664;
+}
+
+.a-warning {
+  background: #D08A4C;
+}
+
+.a-info {
+  background: #3D71B4;
+}
+
+.a-error {
+  background: #C03F35;
+}

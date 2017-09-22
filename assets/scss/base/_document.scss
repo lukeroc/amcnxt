@@ -1,0 +1,53 @@
+// ======= BASE DOC STYLES ============
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none !important;
+
+  &:focus {
+    outline: none !important;
+  }
+}
+
+// ===== BASE CONTAINERS STYLES =======
+html {
+  min-width: 320px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+html,
+body,
+main {
+  height: 100%;
+  background: $color-light;
+  color: $font-color-primary;
+}
+
+// ======= HORIZONTAL RULE ============
+hr {
+  border-width: 1px 0 0;
+  border-style: solid;
+}
+
+// ======= SVG ========================
+svg {
+  width: 100%;
+}
+
+// ======= SCROLLBAR ==================
+::-webkit-scrollbar {
+  width: $scrollbar-width;
+  height: $scrollbar-height;
+}
+
+::-webkit-scrollbar-track {
+    background: $scrollbar-track-background;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $scrollbar-thumb-background;
+}
