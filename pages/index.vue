@@ -1,55 +1,148 @@
 <template>
-  <section class="container">
-    <div>
-      <logo/>
-      <h1 class="title">
-        Amico.ai - the Nuxt.js version
-      </h1>
-      <h2 class="subtitle">
-        Gracefully converting Amico.ai to a Nuxt.js project
-      </h2>
+  <article class="a-content a-landing-page">
+    <div class="a-content-wrapper">
+
+      <!-- WHAT WE DO -->
+      <what-we-do
+        :isAnimating="isWwdAnimating"
+        v-scroll-fire="startAnimation"
+        data-animation="isWwdAnimating">
+      </what-we-do>
+
+      <!-- MEET AMICO -->
+      <meet-amico
+        :isAnimating="isMaAnimating"
+        v-scroll-fire="startAnimation"
+        data-animation="isMaAnimating">
+      </meet-amico>
+
+      <!-- AMICO CONNECT -->
+      <amico-connect
+        :isAnimating="isAcAnimating"
+        v-scroll-fire="startAnimation"
+        data-animation="isAcAnimating">
+      </amico-connect>
+
+      <!-- DOWNLOAD APP -->
+      <download-app
+        :isAnimating="isDaAnimating"
+        v-scroll-fire="startAnimation"
+        data-animation="isDaAnimating">
+      </download-app>
+
     </div>
-  </section>
+  </article>
 </template>
 
+<style lang="scss" src="./index.scss"></style>
+
 <script>
-import Logo from '~/components/Logo.vue'
+import {
+  WhatWeDo,
+  MeetAmico,
+  AmicoConnect,
+  DownloadApp
+} from './landing-page'
 
 export default {
   components: {
-    Logo
+    WhatWeDo,
+    MeetAmico,
+    AmicoConnect,
+    DownloadApp
+  },
+  data () {
+    return {
+      isMobile: true,
+      isWwdAnimating: false,
+      isMaAnimating: false,
+      isAcAnimating: false,
+      isDaAnimating: false,
+      isInputFocused: false,
+      isBrowserSafe: false,
+      currentIndex: -1
+    }
+  },
+  mounted () {
+    // CHECK WINDOW WIDTH
+    if (window.innerWidth >= 920) {
+      this.isMobile = false
+    }
+
+    // DISABLE ANIMATIONS ON IE
+    var version = this.detectIE()
+    if (version !== false) {
+      this.disableAnimations()
+    }
+
+    // INIT STICKY MENU ON DESKTOP
+    if (!this.isMobile) {
+      this.initStickyMenu()
+    }
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', 'handleScroll')
+  },
+  methods: {
+    startAnimation (target) {
+      this[target.getAttribute('data-animation')] = true
+    },
+    disableAnimations () {
+      this.isWwdAnimating = true
+      this.isMaAnimating = true
+      this.isAcAnimating = true
+      this.isDaAnimating = true
+    },
+    detectIE () {
+      var ua = window.navigator.userAgent
+
+      var msie = ua.indexOf('MSIE ')
+      if (msie > 0) {
+        // IE 10 or older => return version number
+        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10)
+      }
+
+      var trident = ua.indexOf('Trident/')
+      if (trident > 0) {
+        // IE 11 => return version number
+        var rv = ua.indexOf('rv:')
+        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10)
+      }
+
+      var edge = ua.indexOf('Edge/')
+      if (edge > 0) {
+        // Edge (IE 12+) => return version number
+        return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10)
+      }
+
+      // other browser
+      return false
+    },
+    initStickyMenu () {
+      var stuck = false
+      var menu = document.querySelector('.a-menu')
+      var stickPoint = menu.offsetTop
+
+      menu.style.position = 'absolute'
+      menu.style.bottom = '0'
+
+      window.addEventListener('scroll', function handleScroll (e) {
+        var distance = menu.offsetTop - window.pageYOffset
+        var offset = window.pageYOffset
+
+        if ((distance <= 0) && !stuck) {
+          menu.style.position = 'fixed'
+          menu.style.top = '0'
+          menu.style.bottom = 'auto'
+          stuck = true
+        } else if (stuck && (offset <= stickPoint)) {
+          menu.style.position = 'absolute'
+          menu.style.top = 'auto'
+          menu.style.bottom = '0'
+          stuck = false
+        }
+      })
+    }
   }
 }
 </script>
-
-<style>
-.container {
-  min-height: calc(100vh - 64px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 42px;
-  color: #35495e;
-  letter-spacing: 1px;
-  margin: 16px 0 4px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 24px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
