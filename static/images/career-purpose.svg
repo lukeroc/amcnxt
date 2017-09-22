@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 101.88 80">
+  <defs>
+    <style>
+      .cls-1 { fill: url(#linear-gradient); } .cls-2 { opacity: 0.6; fill: url(#linear-gradient-2); } .cls-3 { fill: none; stroke-linecap: round; stroke-miterlimit: 10; stroke-width: 2px; stroke: url(#linear-gradient-3); } .cls-4 { fill: url(#linear-gradient-4); }
+    </style>
+    <linearGradient id="linear-gradient" x1="40.46" x2="40.46" y1="40.34" y2="191.55" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffdc00"/>
+      <stop offset="1" stop-color="#fc0"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="40.46" x2="40.46" y1="70.62" y2="9.41" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffb100"/>
+      <stop offset="1" stop-color="#ffb700"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="39.46" x2="93.66" y1="30.06" y2="30.06" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00aeff"/>
+      <stop offset="1" stop-color="#00aeff"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-4" x1="-166.46" x2="-166.47" y1="-329.33" y2="-342.48" gradientTransform="rotate(68.42 -298.778 32.29)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#00aeff"/>
+      <stop offset="1" stop-color="#0090ff"/>
+    </linearGradient>
+  </defs>
+  <g id="Layer_15" data-name="Layer 15">
+    <circle cx="40.46" cy="40.34" r="38.53" class="cls-1"/>
+    <path d="M40.46 13.47a26.87 26.87 0 1 0 26.87 26.87 26.87 26.87 0 0 0-26.87-26.87zm0 42.08a15.21 15.21 0 1 1 15.21-15.21 15.21 15.21 0 0 1-15.21 15.21z" class="cls-2"/>
+    <path d="M92.66 19.77l-52.2 20.57" class="cls-3"/>
+    <path d="M92.17 27.04l-8.01-3.9 3.18-8.33 7.7-3.04-1.36 7.61 6.2 4.62-7.71 3.04z" class="cls-4"/>
+  </g>
+</svg>
