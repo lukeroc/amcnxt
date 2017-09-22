@@ -1,13 +1,15 @@
 <template>
   <header class="a-header">
-    <a-menu></a-menu>
     <a-hero v-if="$route.name === 'index'"></a-hero>
+    <a-menu></a-menu>
   </header>
 </template>
 
+<style lang="scss" src="./aHeader.scss"></style>
+
 <script>
-import aHero from './aHero'
-import aMenu from './aMenu'
+import aHero from './aHero/aHero'
+import aMenu from './aMenu/aMenu'
 
 export default {
   components: {
@@ -27,3 +29,27 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.a-header {
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  width: 100%;
+
+  @media (min-width: 920px) {
+    display: block;
+  }
+
+  .a-menu {
+    position: relative;
+    top: auto;
+    bottom: auto;
+
+    @media (min-width: 920px) {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+}
+</style>
