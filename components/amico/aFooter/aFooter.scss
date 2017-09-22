@@ -13,8 +13,12 @@
   }
 
   .content {
-    background: #303030;
     padding: 40px 0 8px;
+    background: #303030;
+
+    @include MQ(MD) {
+      padding: 40px 0 20px;
+    }
   }
 
   .contained-content {
