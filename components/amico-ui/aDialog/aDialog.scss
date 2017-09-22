@@ -1,0 +1,183 @@
+// ===== IMPORTS ======================
+@import '../../../../scss/base/variables';
+@import '../../../../scss/base/mixins/all';
+
+// ======= DIALOG DEFAULT =============
+$dialog-overlay-padding-sm: 8px !default;
+$dialog-overlay-padding-md: 18px !default;
+$dialog-overlay-padding-lg: 56px !default;
+$dialog-overlay-background: rgba(0, 0, 0, 0.74) !default;
+$dialog-content-container-max-width: 600px !default;
+$dialog-content-container-padding-sm: 32px 24px !default;
+$dialog-content-container-padding-lg: 40px !default;
+$dialog-content-container-background: #252934 !default;
+$dialog-content-container-border-radius: 2px !default;
+$dialog-content-container-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33) !default;
+$dialog-content-max-width: 480px !default;
+$dialog-content-header-margin-bottom: 24px !default;
+$dialog-title-color: #ffffff !default;
+$dialog-title-font-size: 20px !default;
+$dialog-title-line-height: 26px !default;
+$dialog-title-font-weight: 700 !default;
+$dialog-title-letter-spacing: 1px !default;
+$dialog-title-case: uppercase !default;
+$dialog-body-header-margin-bottom: 16px !default;
+$dialog-body-header-padding: 1px 0 !default;
+$dialog-body-header-border-color: #2e3441 !default;
+$dialog-close-space: 16px !default;
+$dialog-close-size: 20px !default;
+$dialog-close-background: #5d5d5d !default;
+$dialog-close-color: #161b24 !default;
+$dialog-close-font-size: 12px !default;
+
+// ======= DIALOG OVERLAY =============
+.a-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: $dialog-overlay-padding-sm;
+  background: $dialog-overlay-background;
+  overflow: hidden;
+  overflow-y: auto;
+  z-index: 10;
+
+  @include MQ(SM) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: $dialog-overlay-padding-md;
+  }
+
+  @include MQ(MD) {
+    padding: $dialog-overlay-padding-lg;
+  }
+}
+
+// ===== DIALOG CONTENT CONTAINER =====
+.a-dialog-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 100%;
+  // position: absolute;
+  // top: 8px; bottom: 8px;
+  // left: 8px; right: 8px;
+  padding: $dialog-content-container-padding-sm;
+  background: $dialog-content-container-background;
+  border-radius: $dialog-content-container-border-radius;
+  box-shadow: $dialog-content-container-box-shadow;
+
+  @include MQ(SM) {
+    margin: 0 auto;
+    width: $dialog-content-container-max-width;
+  }
+
+  @include MQ(SM) {
+    min-height: auto;
+    padding: $dialog-content-container-padding-lg;
+  }
+}
+
+// ======= DIALOG CONTENT =============
+.a-dialog-content {
+  margin: 0 auto;
+  max-width: 640px;
+
+  &.a-dialog-header {
+    margin-bottom: $dialog-content-header-margin-bottom;
+
+    .a-dialog-title {
+      color: $dialog-title-color;
+      font-size: $dialog-title-font-size;
+      line-height: $dialog-title-line-height;
+      font-weight: $dialog-title-font-weight;
+      letter-spacing: $dialog-title-letter-spacing;
+      text-align: center;
+      text-transform: $dialog-title-case;
+    }
+  }
+
+  &.a-dialog-body {
+    .a-dialog-body-header {
+      margin-bottom: $dialog-body-header-margin-bottom;
+      padding: $dialog-body-header-padding;
+      border-width: 0 0 1px;
+      border-style: solid;
+      border-color: $dialog-body-header-border-color;
+    }
+
+    p {
+      color: #dddddd;
+      font-family: $secondary-font;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+    }
+  }
+}
+
+// ======= DIALOG FOOTER ==============
+.a-dialog-footer {
+  margin-top: 56px;
+
+  .a-dialog-actions {
+    display: flex;
+    flex-direction: row;
+
+    .a-button {
+
+      &:only-child {
+        margin: 0 auto;
+      }
+
+      &:last-child {
+        margin-left: auto;
+      }
+
+      @include MQ(XS) {
+        &:first-child {
+          margin-left: auto;
+          margin-right: 16px;
+        }
+
+        &:last-child {
+          margin-right: auto;
+          margin-left: 16px;
+        }
+
+        &:only-child {
+          margin: 0 auto;
+        }
+      }
+
+      @media (max-width: $SM) {
+        min-width: 116px !important;
+      }
+    }
+  }
+}
+
+// ======= DIALOG CLOSE ===============
+.a-dialog-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: $dialog-close-space;
+  right: $dialog-close-space;
+  width: $dialog-close-size;
+  height: $dialog-close-size;
+  background: $dialog-close-background;
+  border-radius: 50%;
+  cursor: pointer;
+
+  i {
+    color: $dialog-close-color;
+    font-size: $dialog-close-font-size;
+    line-height: 1;
+  }
+}

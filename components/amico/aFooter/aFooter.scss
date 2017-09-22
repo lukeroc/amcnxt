@@ -1,0 +1,170 @@
+// ===== IMPORTS ======================
+@import '../../../../scss/base/variables';
+@import '../../../../scss/base/mixins/all';
+
+
+// FOOTER
+.a-footer {
+  background: #303030;
+  color: #9b9b9b;
+
+  @include MQ(MD) {
+    padding: 16px 0 32px;
+  }
+
+  .content {
+    background: #303030;
+    padding: 40px 0 8px;
+  }
+
+  .contained-content {
+    @include MQ(MD) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .footer-column {
+    flex-basis: 100%;
+    margin-bottom: 34px;
+
+    &:last-child {
+      position: relative;
+      margin-top: 40px;
+      margin-bottom: 0;
+      padding-bottom: 20px;
+      height: 40px;
+      text-align: center;
+
+      // .copyright {
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 50%;
+      //   transform: translateX(-50%);
+      // }
+    }
+
+    @include MQ(MD) {
+      flex-basis: 25%;
+      margin: 0;
+    }
+
+    .a-logo {
+      margin: 0 0 12px;
+      width: 100%;
+      max-width: 158px;
+
+      svg {
+        width: 100%;
+
+        path {
+          fill: $color-light;
+        }
+      }
+    }
+
+    .x-small {
+      margin-bottom: 12px;
+    }
+
+    h6 {
+      margin-bottom: 12px;
+      color: $color-light;
+    }
+
+    ul {
+      li {
+        margin-bottom: 12px;
+        font-size: 14px;
+
+        &:last-child {
+          margin-bottom: 0;
+          padding-right: 48px;
+        }
+
+        label,
+        span {
+          display: inline-block;
+        }
+
+        label {
+          width: 16px;
+          vertical-align: top;
+        }
+
+        span {
+          width: calc(100% - 16px);
+        }
+      }
+    }
+
+    .a-social-icons {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 20px 0;
+      width: 100%;
+
+      .a-social-icon {
+        color: #9b9b9b; // $color-light
+        font-size: 18px;
+        transition: color 200ms;
+
+        &:hover {
+          color: $color-light;
+        }
+
+        &:nth-child(2) {
+          margin: 0 50px;
+        }
+      }
+    }
+
+    .field-group {
+      position: relative;
+
+      input[type=email] {
+        width: 100%;
+        height: 40px;
+        padding: 0 48px 0 16px;
+        font-size: 14px;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        transition: border-color 200ms;
+
+        &:focus {
+          border-color: #a2a2a2;
+        }
+      }
+
+      .send-plane {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        width: 19px;
+        height: 18px;
+        transform: translateY(-50%);
+
+        .plane-path {
+          transition: fill 200ms;
+
+          &.is-focused {
+            fill: #a2a2a2 !important;
+          }
+        }
+      }
+
+      .mc-submit-container {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        opacity: 0;
+        cursor: pointer !important;
+        transform: translateY(-50%);
+        z-index: 1;
+      }
+    }
+  }
+}

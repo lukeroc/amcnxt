@@ -1,0 +1,133 @@
+// ===== IMPORTS ======================
+@import '../../../../scss/base/variables';
+@import '../../../../scss/base/mixins/all';
+
+
+// MENU
+.a-menu {
+  position: relative;
+  width: 100%;
+  background: $color-light;
+  z-index: 10;
+
+  @include MQ(MD) {
+    position: fixed;
+    top: 0;
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    padding: 0 16px;
+    border-bottom: 1px solid #e6e6e6;
+    z-index: 10;
+
+    @include MQ(MD) {
+      height: 90px;
+      border-bottom: none;
+    }
+  }
+
+  .a-logo {
+    max-width: 130px;
+
+    @include MQ(MD) {
+      max-width: 158px;
+    }
+
+    svg {
+      width: 100%;
+
+      path {
+        fill: $color-primary-shade;
+      }
+    }
+  }
+}
+
+// MENU DROPDOWN
+.a-menu-dropdown {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  background: white;
+  will-change: top;
+  z-index: -1;
+
+  .a-menu-links {
+    .a-menu-link {
+      display: block;
+      margin: 0;
+      padding: 0 16px;
+      height: 60px;
+      line-height: 60px;
+      border-bottom: 1px solid #e6e6e6;
+    }
+  }
+}
+
+// MENU LINKS
+.a-menu-links {
+  .a-menu-link {
+    margin-right: 24px;
+    font-size: 16px;
+    font-weight: 400;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+
+    &.router-link-active {
+      font-weight: 500;
+    }
+  }
+}
+
+// BURGER
+.a-burger {
+  cursor: pointer;
+  transition: transform 200ms;
+
+  &:hover {
+    .a-burger-bar {
+      &:first-child {
+        transform: translateY(-50%);
+      }
+
+      &:last-child {
+        transform: translateY(50%);
+      }
+    }
+  }
+
+  &.a-mobile-menu-visible {
+    transform: rotate(90deg);
+  }
+
+  @include MQ(MD) {
+    display: none;
+  }
+
+  .a-burger-bar {
+    display: block;
+    margin-bottom: 2px;
+    width: 24px;
+    height: 4px;
+    background: #9b9b9b;
+    border-radius: 1px;
+    transition: transform 200ms;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.a-unsupported-browser {
+  width: 100%;
+  min-height: 100vh;
+  background: #FFCC00;
+  background: linear-gradient(180deg, #FFDC00 0%, #FFCC00 100%);
+
+  .content {
+    background: none;
+
+    @media (min-width: 768px) {
+      padding: 120px 0;
+    }
+
+    .contained-content {
+      max-width: 920px;
+    }
+  }
+
+  .a-logo {
+    margin: 0 0 32px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+
+    svg {
+      margin: 0 auto;
+      width: 158px;
+
+      path {
+        fill: #ffffff;
+      }
+    }
+  }
+
+  .a-unsupported-content {
+    &:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .a-text-content,
+    .a-image-content {
+      @media (min-width: 768px) {
+        float: right;
+        width: 50%;
+      }
+    }
+
+    .a-image-content {
+      .a-amico-sad {
+        margin-bottom: 24px;
+        width: 100%;
+        text-align: center;
+
+        img {
+          max-width: 348px;
+        }
+      }
+    }
+
+    .a-text-content {
+      @media (min-width: 768px) {
+        max-width: 480px;
+      }
+
+      .a-title {
+        margin-bottom: 24px;
+        font-size: 45px;
+        line-height: 50px;
+      }
+
+      .a-message {
+        margin-bottom: 32px;
+      }
+
+      .a-browsers {
+        display: block;
+
+        &:after {
+          display: block;
+          content: '';
+          clear: both;
+        }
+
+        .a-browser {
+          float: left;
+          margin: 0 32px 32px 0;
+          text-align: center;
+          letter-spacing: 0;
+          text-transform: uppercase;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+
+          .a-browser-icon {
+            text-align: center;
+          }
+
+          .a-browser-name {
+            font-size: 12px;
+            line-height: 14px;
+            color: #505050;
+            display: block;
+            letter-spacing: 0;
+            margin: 4px auto 0;
+          }
+        }
+      }
+    }
+  }
+}

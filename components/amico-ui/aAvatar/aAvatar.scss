@@ -1,0 +1,34 @@
+// ======= AVATAR DEFAULT =============
+$avatar-details-margin-left: 24px !default;
+$avatar-label-line-height: 2.5em !default;
+
+// ======= AVATAR =====================
+.a-avatar {
+  display: flex;
+  align-items: center;
+
+  .a-avatar-link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .a-avatar-image {
+    display: inline-block;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  .a-avatar-details {
+    margin-left: $avatar-details-margin-left;
+  }
+
+  .a-avatar-name,
+  .a-avatar-caption {
+    text-transform: uppercase;
+  }
+
+  .a-avatar-name {
+    line-height: $avatar-label-line-height;
+  }
+}

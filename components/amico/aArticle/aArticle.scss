@@ -1,0 +1,67 @@
+// ===== IMPORTS ======================
+@import '../../../assets/scss/base/variables';
+@import '../../../assets/scss/base/mixins/all';
+
+
+// ===== ARTICLE ======================
+.a-article {
+  .a-article-intro {
+    height: 340px;
+    background-position: center center !important;
+
+    @media (min-width: 640px) {
+      height: 500px;
+    }
+  }
+
+  .a-article-content {
+    margin: 0 auto 32px;
+    width: 100%;
+    max-width: 920px;
+
+    @include MQ(LG) {
+      max-width: 1024px;
+    }
+
+    @include MQ(XL) {
+      max-width: 1140px;
+    }
+
+    .a-article-subtitle {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 25px;
+    }
+  }
+
+  .a-article-header {
+
+    @include MQ(MD) {
+      padding-top: 16px;
+    }
+
+    .a-article-title,
+    .a-article-subtitle {
+      letter-spacing: 0;
+    }
+
+    .a-article-title {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
+    .a-article-date {
+      color: #7a7a7a;
+    }
+
+    .a-article-separator {
+      margin: 16px 0;
+    }
+  }
+
+  .a-about-author {
+    .x-small {
+      color: #7a7a7a;
+    }
+  }
+}

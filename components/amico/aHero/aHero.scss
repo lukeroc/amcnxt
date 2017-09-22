@@ -1,0 +1,198 @@
+// ===== IMPORTS ======================
+@import '../../../../scss/base/variables';
+@import '../../../../scss/base/mixins/all';
+
+// HERO
+.a-hero {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: $color-secondary;
+  overflow: hidden;
+  background: url('/static/images/hero-pattern-mob.png') #0099ff no-repeat;
+  background-position: center;
+  background-size: contained;
+
+  @include MQ(SM) {
+    background: url('/static/images/hero-pattern.png') #0099ff no-repeat;
+    background-position: center;
+    background-size: contained;
+  }
+
+  @include MQ(MD) {
+    height: 840px;
+  }
+
+  .a-hero-text {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 640px;
+    padding: 20px;
+    z-index: 1;
+
+    @include MQ(MD) {
+      max-width: 920px;
+      padding: 48px 20px;
+    }
+
+    .a-hero-heading {
+      color: #ffffff;
+      font-weight: 800;
+      letter-spacing: -1px;
+      font-size: 35px;
+      line-height: 40px;
+      text-align: center;
+
+      @include MQ(MD) {
+        font-size: 60px;
+        line-height: 71px;
+      }
+    }
+  }
+
+  .a-hero-image {
+    .a-hero-phone {
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 auto -4px;
+      max-width: 250px;
+
+      @media (min-width: 400px) {
+        max-width: 280px;
+      }
+
+      @media (min-width: 540px) {
+        bottom: -64px;
+        max-width: 322px;
+      }
+
+      .cls-1 {
+        fill: #f2f2f2;
+      }
+
+      .cls-2 {
+        fill: #dadee5;
+        stroke: #dadee5;
+      }
+
+      .cls-12, .cls-2, .cls-6, .cls-7 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: #fcfcfe;
+      }
+
+      .cls-4 {
+        fill: #9fa4b2;
+      }
+
+      .cls-5, .cls-6, .cls-7 {
+        fill: #efefef;
+        opacity: 0.65;
+        isolation: isolate;
+      }
+
+      .cls-6, .cls-7 {
+        stroke: #efefef;
+      }
+
+      .cls-6 {
+        stroke-width: 2px;
+      }
+
+      .cls-12, .cls-7 {
+        stroke-width: 3px;
+      }
+
+      .cls-12, .cls-8 {
+        fill: #fff;
+      }
+
+      .cls-9 {
+        fill: #ddd;
+      }
+
+      .cls-10 {
+        fill: url(#hp-linear-gradient);
+      }
+
+      .cls-11 {
+        fill: #7f6600;
+      }
+
+      .cls-12 {
+        stroke: #ffd400;
+      }
+
+      .cls-13 {
+        fill: #484f5f;
+      }
+
+      .cls-14 {
+        fill: #fea393;
+      }
+
+      .cls-15 {
+        fill: url(#hp-linear-gradient-2);
+      }
+
+      .cls-16 {
+        fill: url(#hp-linear-gradient-3);
+      }
+
+      .cls-17 {
+        fill: #e0b707;
+      }
+
+      .cls-18 {
+        fill: url(#hp-linear-gradient-4);
+      }
+
+      .cls-19 {
+        fill: url(#hp-linear-gradient-5);
+      }
+
+      .cls-20 {
+        fill: url(#hp-linear-gradient-6);
+      }
+
+      @include MQ(MD) {
+        bottom: 0;
+        max-width: 461px;
+      }
+
+      .chat-component {
+        transform: translateY(-5px);
+
+        .chat-avatar,
+        .chat-bubble,
+        .chat-bubble-inverse {
+          opacity: 0;
+          transform-origin: unset;
+        }
+
+        .chat-avatar {
+          transform: scale(0);
+          transition: transform 400ms, opacity 600ms;
+        }
+
+        .chat-bubble,
+        .chat-bubble-inverse {
+          transition: transform 400ms 50ms, opacity 600ms 50ms;
+        }
+
+        .chat-bubble {
+          transform: scale(0.5)  translateX(150px);
+        }
+
+        .chat-bubble-inverse {
+          transform: scale(0.5)  translateX(-150px);
+        }
+      }
+    }
+  }
+}
