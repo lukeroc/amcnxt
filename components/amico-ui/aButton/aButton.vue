@@ -30,7 +30,7 @@
 <style lang="scss" src="./aButton.scss"></style>
 
 <script>
-import { aSpinner } from 'components/amico-ui/aSpinner'
+import { aSpinner } from '~/components/amico-ui/aSpinner'
 
 export default {
   props: ['type', 'size', 'label', 'iconLeft', 'iconRight', 'isLoading', 'isDisabled', 'to', 'href'],
