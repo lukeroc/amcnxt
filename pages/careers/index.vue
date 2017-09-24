@@ -164,8 +164,9 @@
               class="a-opening">
 
               <nuxt-link
-                :to="{name: 'career-details', params: {link: career.link, career: career, isDetailsRouteVisible: true}}" class="a-opening-link"
+                :to="{name: 'careers-career', params: {career: career.link, careerDetails: career, isDetailsRouteVisible: true}}" class="a-opening-link"
                 @click.native="isDetailsRouteVisible = true">
+
                 <p class="strong">{{ career.name }}</p>
                 <p class="x-small">{{ career.sector }}</p>
               </nuxt-link>
@@ -174,13 +175,6 @@
         </div>
       </div>
     </section>
-
-    <!-- CAREER DETAILS SUB VIEW -->
-    <!-- <transition name="fade-in">
-      <section v-if="isDetailsRouteVisible" class="a-career-details">
-        <router-view></router-view>
-      </section>
-    </transition> -->
 
   </article>
 </template>
