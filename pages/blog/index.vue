@@ -2,8 +2,8 @@
 
   <a-article
     title="Why your future best friend may be a charming robot"
-    featuredImage="~/static/images/hero-background-blog.png"
-    featuredImageMob="~/static/images/hero-background-blog-mob.png"
+    featuredImage="hero-background-blog.png"
+    featuredImageMob="hero-background-blog-mob.png"
     publishDate="11 September 2017">
 
     <div slot="a-article-content" class="content-wrapper">

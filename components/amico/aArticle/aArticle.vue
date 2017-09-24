@@ -17,14 +17,14 @@
     <!-- MOBILE ARTICLE INTRO -->
     <div
       v-if="isMobile"
-      :style="`background:url(${featuredImageMob}) #f7f8fa no-repeat;`"
+      :style="`background:url(/images/${featuredImageMob}) #f7f8fa no-repeat;`"
       class="a-article-intro">
     </div>
 
     <!-- DESKTOP ARTICLE INTRO -->
     <div
       v-else
-      :style="`background:url(${featuredImage}) #f7f8fa no-repeat;`"
+      :style="`background:url(/images/${featuredImage}) #f7f8fa no-repeat;`"
       class="a-article-intro">
     </div>
 

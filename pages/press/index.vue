@@ -1,8 +1,8 @@
 <template>
   <a-article
     title="Maltese startup to showcase Amico, a friendly AI character, at ZEST 2017"
-    featuredImage="~/static/images/hero-background-press.png"
-    featuredImageMob="~/static/images/hero-background-press-mob.png"
+    featuredImage="hero-background-press.png"
+    featuredImageMob="hero-background-press-mob.png"
     publishDate="06 September 2017">
 
     <div slot="a-article-content" class="content-wrapper">
