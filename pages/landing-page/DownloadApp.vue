@@ -71,7 +71,12 @@
 
 <script>
 export default {
-  props: ['isAnimating']
+  props: ['isAnimating'],
+  data () {
+    return {
+      isInputFocused: false
+    }
+  }
 }
 </script>
 
