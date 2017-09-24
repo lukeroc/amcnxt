@@ -10,78 +10,80 @@
           <h2 class="a-intro-title">Come and join us!</h2>
 
           <!-- COMPANY VALUES MOBILE -->
-          <div v-if="isMobile" class="a-company-values">
-            <carousel
-              :perPage="1"
-              :perPageCustom="[[768, 2]]"
-              :minSwipeDistance="30"
-              :scrollPerPage="true"
-              :navigationEnabled="false"
-              :paginationEnabled="true"
-              paginationColor="#008ae5"
-              paginationActiveColor="#ffffff">
+          <no-ssr v-if="isMobile">
+            <div class="a-company-values">
+              <carousel
+                :perPage="1"
+                :perPageCustom="[[768, 2]]"
+                :minSwipeDistance="30"
+                :scrollPerPage="true"
+                :navigationEnabled="false"
+                :paginationEnabled="true"
+                paginationColor="#008ae5"
+                paginationActiveColor="#ffffff">
 
-              <!-- FULFILMENT -->
-              <slide>
-                <div class="a-company-value">
-                  <div class="a-value-header">
-                    <img class="a-value-icon" alt="Career Fulfilment illustration" src="~/static/images/career-fulfilment.svg">
-                    <h5 class="a-value-title">Fulfilment</h5>
+                <!-- FULFILMENT -->
+                <slide>
+                  <div class="a-company-value">
+                    <div class="a-value-header">
+                      <img class="a-value-icon" alt="Career Fulfilment illustration" src="~/static/images/career-fulfilment.svg">
+                      <h5 class="a-value-title">Fulfilment</h5>
+                    </div>
+                    <div class="a-value-content">
+                      <p class="a-value-body small">
+                        We are building a super talented team. Everyone here
+                        holds each other to such high standards, that we end
+                        up challenging ourselves.
+                      </p>
+                      <p class="a-value-body small">
+                        As we work, we are not just developing products but
+                        principally ourselves as professionals. And so after
+                        a day at work we go back home with our heads held
+                        high with pride.
+                      </p>
+                    </div>
                   </div>
-                  <div class="a-value-content">
-                    <p class="a-value-body small">
-                      We are building a super talented team. Everyone here
-                      holds each other to such high standards, that we end
-                      up challenging ourselves.
-                    </p>
-                    <p class="a-value-body small">
-                      As we work, we are not just developing products but
-                      principally ourselves as professionals. And so after
-                      a day at work we go back home with our heads held
-                      high with pride.
-                    </p>
-                  </div>
-                </div>
-              </slide>
+                </slide>
 
-              <!-- PURPOSE -->
-              <slide>
-                <div class="a-company-value">
-                  <div class="a-value-header">
-                    <img class="a-value-icon" alt="Career Purpose illustration" src="~/static/images/career-purpose.svg" style="padding-left: 22px;">
-                    <h5 class="a-value-title">Purpose</h5>
+                <!-- PURPOSE -->
+                <slide>
+                  <div class="a-company-value">
+                    <div class="a-value-header">
+                      <img class="a-value-icon" alt="Career Purpose illustration" src="~/static/images/career-purpose.svg" style="padding-left: 22px;">
+                      <h5 class="a-value-title">Purpose</h5>
+                    </div>
+                    <div class="a-value-content">
+                      <p class="a-value-body small">
+                        Our every-day motivation comes from having a purpose that
+                        is larger than ourselves.
+                      </p>
+                      <p class="a-value-body small">
+                        We are working to achieve breakthroughs in Adaptive AI, a groundbreaking technology that is already transforming the future and will create lots of positive value in the world.
+                      </p>
+                    </div>
                   </div>
-                  <div class="a-value-content">
-                    <p class="a-value-body small">
-                      Our every-day motivation comes from having a purpose that
-                      is larger than ourselves.
-                    </p>
-                    <p class="a-value-body small">
-                      We are working to achieve breakthroughs in Adaptive AI, a groundbreaking technology that is already transforming the future and will create lots of positive value in the world.
-                    </p>
-                  </div>
-                </div>
-              </slide>
+                </slide>
 
-              <!-- BENEFITS -->
-              <slide>
-                <div class="a-company-value">
-                  <div class="a-value-header">
-                      <img class="a-value-icon" alt="Career Benefits illustration" src="~/static/images/career-benefits.svg">
-                    <h5 class="a-value-title">Benefits</h5>
+                <!-- BENEFITS -->
+                <slide>
+                  <div class="a-company-value">
+                    <div class="a-value-header">
+                        <img class="a-value-icon" alt="Career Benefits illustration" src="~/static/images/career-benefits.svg">
+                      <h5 class="a-value-title">Benefits</h5>
+                    </div>
+                    <div class="a-value-content">
+                      <p class="a-value-body small">
+                        Working in a friendly and relaxed environment makes our productivity grow.
+                      </p>
+                      <p class="a-value-body small">
+                        We offer flexible hours, competitive salaries, social events, a personal training fund, use of swimming pool, games room, free drinks, snacks and more. This is the true revenge of the nerds.
+                      </p>
+                    </div>
                   </div>
-                  <div class="a-value-content">
-                    <p class="a-value-body small">
-                      Working in a friendly and relaxed environment makes our productivity grow.
-                    </p>
-                    <p class="a-value-body small">
-                      We offer flexible hours, competitive salaries, social events, a personal training fund, use of swimming pool, games room, free drinks, snacks and more. This is the true revenge of the nerds.
-                    </p>
-                  </div>
-                </div>
-              </slide>
-            </carousel>
-          </div>
+                </slide>
+              </carousel>
+            </div>
+          </no-ssr>
 
           <!-- COMPANY VALUES DESKTOP -->
           <div v-else class="a-company-values">
