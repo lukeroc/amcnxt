@@ -13,7 +13,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0-rc11",
+    "nuxt": "latest",
+    "@nuxtjs/pwa": "latest",
     "vue-carousel": "^0.6.5"
   },
   "devDependencies": {

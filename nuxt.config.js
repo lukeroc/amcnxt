@@ -46,7 +46,22 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#ffcc00' },
+  /*
+  ** Set external plugins
+  */
   plugins: ['~/directives/scroll-fire.js'],
+  /*
+  ** Modules
+  */
+  modules: [
+    '@nuxtjs/pwa'
+  ],
+  /*
+  ** Customize app manifest
+  */
+  manifest: {
+    theme_color: '#ffcc00'
+  },
   /*
   ** Build configuration
   */
