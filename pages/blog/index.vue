@@ -41,7 +41,7 @@
             </p>
           </div>
           <div class="image-content robots">
-            <img src="~/static/images/blog-content-robots.jpg">
+            <img alt="Evolving AI." src="~/static/images/blog-content-robots.jpg">
           </div>
         </div>
       </div>

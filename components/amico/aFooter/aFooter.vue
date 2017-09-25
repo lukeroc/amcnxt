@@ -29,17 +29,17 @@
           <p class="x-small">Follow us on all of our social media channels for the latest updates.</p>
           <div class="a-social-icons">
             <div class="a-social-icon">
-              <a target="_blank" rel="noopener" href="https://www.facebook.com/amicoai/">
+              <a target="_blank" rel="noopener" aria-label="Facebook" href="https://www.facebook.com/amicoai/">
                 <i class="icon icon-facebook"></i>
               </a>
             </div>
             <div class="a-social-icon">
-              <a target="_blank" rel="noopener" href="https://www.instagram.com/amico.ai/">
+              <a target="_blank" rel="noopener" aria-label="Instagram" href="https://www.instagram.com/amico.ai/">
                 <i class="icon icon-instagram"></i>
               </a>
             </div>
             <div class="a-social-icon">
-              <a target="_blank" rel="noopener" href="https://twitter.com/AmicoAI">
+              <a target="_blank" rel="noopener" aria-label="Twitter" href="https://twitter.com/AmicoAI">
                 <i class="icon icon-twitter"></i>
               </a>
             </div>
