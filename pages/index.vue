@@ -79,16 +79,9 @@ export default {
       this.initStickyMenu()
     }
   },
-  // destroyed () {
-  //   // eslint-disable-next-line no-debugger
-  //   debugger
-  //   window.removeEventListener('scroll', 'handleScroll')
-  //   document.querySelector('.a-menu').removeAttribute('style')
-  // },
-  beforeDestroy () {
-    // eslint-disable-next-line no-debugger
-    debugger // lol
-    window.removeEventListener('scroll', 'handleScroll')
+  destroyed () {
+    this.removeScrollEvent()
+    this.removeMenuInlineStyle()
   },
   methods: {
     startAnimation (target) {
@@ -133,7 +126,9 @@ export default {
       menu.style.position = 'absolute'
       menu.style.bottom = '0'
 
-      window.addEventListener('scroll', function handleScroll (e) {
+      window.onscroll = () => {
+        console.log('scrolling')
+
         var distance = menu.offsetTop - window.pageYOffset
         var offset = window.pageYOffset
 
@@ -148,7 +143,14 @@ export default {
           menu.style.bottom = '0'
           stuck = false
         }
-      })
+      }
+    },
+    removeScrollEvent () {
+      window.onscroll = null
+    },
+    removeMenuInlineStyle () {
+      let menu = document.querySelector('.a-menu')
+      menu.removeAttribute('style')
     }
   }
 }
