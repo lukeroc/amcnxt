@@ -27,12 +27,12 @@ const fileManifest = [
     "revision": "c041bedcb350d76b565084d996b1917a"
   },
   {
-    "url": "/_nuxt/layouts/default.a0d864b0b225ef3c6411.js",
-    "revision": "e59b01eabb5ef321fb986bfb6066f4b0"
+    "url": "/_nuxt/layouts/default.d136155bf84e22579031.js",
+    "revision": "874cc7dd3888f19c07e6356cf79cd0a8"
   },
   {
-    "url": "/_nuxt/manifest.963564ce1b920aa4e144.js",
-    "revision": "15fe7ed300e73a5c7733fc983f294aed"
+    "url": "/_nuxt/manifest.f1debacb05242613a788.js",
+    "revision": "c5400d9d7ee17659f14ae556c16b9578"
   },
   {
     "url": "/_nuxt/pages/blog/index.945893d7a23b082e5c3a.js",
@@ -47,8 +47,8 @@ const fileManifest = [
     "revision": "dcbed1237529fbb15b3ed4fddffd39be"
   },
   {
-    "url": "/_nuxt/pages/index.e06b0268431ed3c12fc0.js",
-    "revision": "c4f8699db245867c0c247e668913b850"
+    "url": "/_nuxt/pages/index.c5773686aba338eb0472.js",
+    "revision": "d524739675943c2a6880cd2254786f47"
   },
   {
     "url": "/_nuxt/pages/landing-page/AmicoConnect.4ebdf1a5ae2d11b64c59.js",
