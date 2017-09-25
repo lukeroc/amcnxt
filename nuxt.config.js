@@ -60,7 +60,52 @@ module.exports = {
   ** Customize app manifest
   */
   manifest: {
-    theme_color: '#ffcc00'
+    name: 'Amico.ai',
+    short_name: 'Amico.ai',
+    description: 'Hi there. I am Amico, your new AI friend. Are you up for a chat? Visit my website to learn more and start talking to an AI 😊',
+    lang: 'en-US',
+    start_url: '/',
+    scope: '/',
+    display: 'fullscreen',
+    background_color: '#f6f8f9',
+    theme_color: '#ffcc00',
+    icons: [
+      {
+        'src': 'app-icons/16x16.png',
+        'sizes': '16x16',
+        'type': 'image/png'
+      },
+      {
+        'src': 'app-icons/32x32.png',
+        'sizes': '32x32',
+        'type': 'image/png'
+      },
+      {
+        'src': 'app-icons/64x64.png',
+        'sizes': '64x64',
+        'type': 'image/png'
+      },
+      {
+        'src': 'app-icons/144x144.png',
+        'sizes': '144x144',
+        'type': 'image/png'
+      },
+      {
+        'src': 'app-icons/192x192.png',
+        'sizes': '192x192',
+        'type': 'image/png'
+      },
+      {
+        'src': 'app-icons/256x256.png',
+        'sizes': '256x256',
+        'type': 'image/png'
+      },
+      {
+        'src': 'app-icons/512x512.png',
+        'sizes': '512x512',
+        'type': 'image/png'
+      }
+    ]
   },
   /*
   ** Build configuration
