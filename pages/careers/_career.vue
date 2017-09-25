@@ -1,6 +1,6 @@
 <template>
   <article class="a-content">
-    <div class="content-wrapper">
+    <div v-if="career" class="content-wrapper">
 
       <div class="content a-career-details-header">
         <div class="contained-content">

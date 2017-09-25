@@ -1,7 +1,12 @@
 <template>
-  <header class="a-header">
-    <a-hero v-if="$route.name === 'index'"></a-hero>
-    <a-menu></a-menu>
+  <header :class="{'home-header': $route.name === 'index'}" class="a-header">
+    <template v-if="$route.name === 'index'">
+      <a-hero></a-hero>
+      <a-menu></a-menu>
+    </template>
+    <template v-else>
+      <a-menu></a-menu>
+    </template>
   </header>
 </template>
 
@@ -29,27 +34,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.a-header {
-  display: flex;
-  flex-direction: column-reverse;
-  position: relative;
-  width: 100%;
-
-  @media (min-width: 920px) {
-    display: block;
-  }
-
-  .a-menu {
-    position: relative;
-    top: auto;
-    bottom: auto;
-
-    @media (min-width: 920px) {
-      position: absolute;
-      bottom: 0;
-    }
-  }
-}
-</style>

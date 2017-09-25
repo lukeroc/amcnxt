@@ -58,7 +58,6 @@ export default {
       isMaAnimating: false,
       isAcAnimating: false,
       isDaAnimating: false,
-      isInputFocused: false,
       isBrowserSafe: false,
       currentIndex: -1
     }
@@ -80,7 +79,15 @@ export default {
       this.initStickyMenu()
     }
   },
+  // destroyed () {
+  //   // eslint-disable-next-line no-debugger
+  //   debugger
+  //   window.removeEventListener('scroll', 'handleScroll')
+  //   document.querySelector('.a-menu').removeAttribute('style')
+  // },
   beforeDestroy () {
+    // eslint-disable-next-line no-debugger
+    debugger // lol
     window.removeEventListener('scroll', 'handleScroll')
   },
   methods: {
