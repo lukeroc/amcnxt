@@ -13,8 +13,9 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "latest",
+    "@nuxtjs/google-analytics": "latest",
     "@nuxtjs/pwa": "latest",
+    "nuxt": "latest",
     "vue-carousel": "^0.6.5"
   },
   "devDependencies": {
