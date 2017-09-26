@@ -1,0 +1,1 @@
+export { isIE } from './isIE'

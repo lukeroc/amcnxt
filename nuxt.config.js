@@ -49,7 +49,10 @@ module.exports = {
   /*
   ** Set external plugins
   */
-  plugins: ['~/directives/scroll-fire.js'],
+  plugins: [
+    { src: '~/directives/scroll-fire.js', ssr: false },
+    { src: '~/plugins', ssr: false }
+  ],
   /*
   ** Modules
   */
