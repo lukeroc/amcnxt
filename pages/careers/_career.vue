@@ -108,8 +108,9 @@ export default {
       career: null
     }
   },
-  created () {
-    this.careerId = this.$route.path.substr(this.$route.path.lastIndexOf('/') + 1)
+  mounted () {
+    let path = this.$route.path
+    this.careerId = path.substr(path.lastIndexOf('/') + 1)
     this.career = CAREERS.filter(career => (career.link === this.careerId))[0]
   }
 }

@@ -31,16 +31,16 @@ const fileManifest = [
     "revision": "6cc86ed26b5939d46900146ae57efaef"
   },
   {
-    "url": "/_nuxt/manifest.b2bb79ea8226f930bff2.js",
-    "revision": "226015cee568cb797bdc6630cb5b04d6"
+    "url": "/_nuxt/manifest.29aa20c0b58d95b26d8e.js",
+    "revision": "8ed9cea5bd09e855c556155d4fe3ad57"
   },
   {
     "url": "/_nuxt/pages/blog/index.f2107d53f3520a2013dd.js",
     "revision": "ae809c68135ed58f93b4d51c6b87fee7"
   },
   {
-    "url": "/_nuxt/pages/careers/_career.1ca128f83533d13e7eed.js",
-    "revision": "d20828de59453cadd6a2cac2551b5347"
+    "url": "/_nuxt/pages/careers/_career.d8b7b217d5715154cf42.js",
+    "revision": "b2955570e492314440834172fb3fbce1"
   },
   {
     "url": "/_nuxt/pages/careers/index.f793bc673ce4c129d09b.js",
