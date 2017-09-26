@@ -19,24 +19,24 @@ importScripts('workbox-sw.prod.v1.3.0.js');
  */
 const fileManifest = [
   {
-    "url": "/_nuxt/app.a49918448115c807f72f.js",
-    "revision": "89af352c3551c72e55bd0b42702b3bca"
+    "url": "/_nuxt/app.1d8ca07d8a0e45606866.js",
+    "revision": "9a9033493982546594c30857411bc1ca"
   },
   {
     "url": "/_nuxt/common.e7e9b201c8f361f8be5e.js",
     "revision": "c041bedcb350d76b565084d996b1917a"
   },
   {
-    "url": "/_nuxt/layouts/default.cad708e5797f10e8570a.js",
-    "revision": "6fc120b78b324bb46fcde523db92b05b"
+    "url": "/_nuxt/layouts/default.4287b5540addb9df96a4.js",
+    "revision": "50f565e5f6abf04fc57135e968cf7057"
   },
   {
-    "url": "/_nuxt/manifest.c14b3f83687881f53078.js",
-    "revision": "29537a2ad46f5f43e71f8d0f798fb631"
+    "url": "/_nuxt/manifest.6aaf99b00a166f52807a.js",
+    "revision": "120a30dc27b0244c88f8e91418d590a7"
   },
   {
-    "url": "/_nuxt/pages/blog/index.47034bff22aeab8bed09.js",
-    "revision": "44b6f9a6a325da4a0a88f9582da8ed0c"
+    "url": "/_nuxt/pages/blog/index.f2107d53f3520a2013dd.js",
+    "revision": "ae809c68135ed58f93b4d51c6b87fee7"
   },
   {
     "url": "/_nuxt/pages/careers/_career.19d88fc333fdfd007b2d.js",
@@ -47,8 +47,8 @@ const fileManifest = [
     "revision": "dcbed1237529fbb15b3ed4fddffd39be"
   },
   {
-    "url": "/_nuxt/pages/index.02a0bacfb09fae7c44a6.js",
-    "revision": "199cbfe6a3729b0041ab85a4b25520ac"
+    "url": "/_nuxt/pages/index.569da21d5025ef2e7e9a.js",
+    "revision": "b7b3d57c4e3931792cf7eb6b4f0e72a5"
   },
   {
     "url": "/_nuxt/pages/landing-page/AmicoConnect.4ebdf1a5ae2d11b64c59.js",
@@ -67,8 +67,8 @@ const fileManifest = [
     "revision": "d1b6de042c5f9cfb8e002f59d3e8438c"
   },
   {
-    "url": "/_nuxt/pages/press/index.71d27d5080aa2c0f621d.js",
-    "revision": "9b71c3c62f6fcf91dcd9da061a2a7c79"
+    "url": "/_nuxt/pages/press/index.2087e69400cffd90f8f1.js",
+    "revision": "2bc66a60408dc3ee03113137c3bc1461"
   }
 ];
 
