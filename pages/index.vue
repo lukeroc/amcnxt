@@ -127,7 +127,10 @@ export default {
     },
     removeMenuInlineStyle () {
       let menu = document.querySelector('.a-menu')
-      menu.removeAttribute('style')
+
+      if (menu) {
+        menu.removeAttribute('style')
+      }
     }
   }
 }
