@@ -57,7 +57,8 @@ module.exports = {
   ** Modules
   */
   modules: [
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    ['@nuxtjs/google-analytics', { ua: 'UA-104193994-1' }]
   ],
   /*
   ** Customize app manifest
@@ -71,44 +72,7 @@ module.exports = {
     scope: '/',
     display: 'fullscreen',
     background_color: '#f6f8f9',
-    theme_color: '#ffcc00',
-    icons: [
-      {
-        'src': 'app-icons/16x16.png',
-        'sizes': '16x16',
-        'type': 'image/png'
-      },
-      {
-        'src': 'app-icons/32x32.png',
-        'sizes': '32x32',
-        'type': 'image/png'
-      },
-      {
-        'src': 'app-icons/64x64.png',
-        'sizes': '64x64',
-        'type': 'image/png'
-      },
-      {
-        'src': 'app-icons/144x144.png',
-        'sizes': '144x144',
-        'type': 'image/png'
-      },
-      {
-        'src': 'app-icons/192x192.png',
-        'sizes': '192x192',
-        'type': 'image/png'
-      },
-      {
-        'src': 'app-icons/256x256.png',
-        'sizes': '256x256',
-        'type': 'image/png'
-      },
-      {
-        'src': 'app-icons/512x512.png',
-        'sizes': '512x512',
-        'type': 'image/png'
-      }
-    ]
+    theme_color: '#ffcc00'
   },
   /*
   ** Build configuration
