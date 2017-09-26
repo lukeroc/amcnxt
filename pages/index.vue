@@ -37,6 +37,8 @@
 <style lang="scss" src="./index.scss"></style>
 
 <script>
+import { isIE } from '~/plugins'
+
 import {
   WhatWeDo,
   MeetAmico,
@@ -51,6 +53,9 @@ export default {
     AmicoConnect,
     DownloadApp
   },
+  plugins: [
+    isIE
+  ],
   data () {
     return {
       isMobile: true,
@@ -68,15 +73,14 @@ export default {
       this.isMobile = false
     }
 
-    // DISABLE ANIMATIONS ON IE
-    var version = this.detectIE()
-    if (version !== false) {
-      this.disableAnimations()
-    }
-
     // INIT STICKY MENU ON DESKTOP
     if (!this.isMobile) {
       this.initStickyMenu()
+    }
+
+    // DISABLE ANIMATIONS ON IE
+    if (isIE()) {
+      this.disableAnimations()
     }
   },
   destroyed () {
@@ -93,31 +97,6 @@ export default {
       this.isAcAnimating = true
       this.isDaAnimating = true
     },
-    detectIE () {
-      var ua = window.navigator.userAgent
-
-      var msie = ua.indexOf('MSIE ')
-      if (msie > 0) {
-        // IE 10 or older => return version number
-        return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10)
-      }
-
-      var trident = ua.indexOf('Trident/')
-      if (trident > 0) {
-        // IE 11 => return version number
-        var rv = ua.indexOf('rv:')
-        return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10)
-      }
-
-      var edge = ua.indexOf('Edge/')
-      if (edge > 0) {
-        // Edge (IE 12+) => return version number
-        return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10)
-      }
-
-      // other browser
-      return false
-    },
     initStickyMenu () {
       var stuck = false
       var menu = document.querySelector('.a-menu')
@@ -127,8 +106,6 @@ export default {
       menu.style.bottom = '0'
 
       window.onscroll = () => {
-        console.log('scrolling')
-
         var distance = menu.offsetTop - window.pageYOffset
         var offset = window.pageYOffset
 
