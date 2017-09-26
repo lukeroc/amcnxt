@@ -91,6 +91,10 @@
 <style lang="scss" src="./_career.scss"></style>
 
 <script>
+
+import { filter } from 'lodash/filter' // eslint-disable-line no-unused-vars
+
+import { CAREERS } from './careers.const'
 import { aButton } from '~/components/amico-ui/aButton'
 
 export default {
@@ -99,11 +103,14 @@ export default {
   },
   data () {
     return {
+      CAREERS,
+      careerId: null,
       career: null
     }
   },
   created () {
-    this.career = this.$route.params.careerDetails
+    this.careerId = this.$route.path.substr(this.$route.path.lastIndexOf('/') + 1)
+    this.career = CAREERS.filter(career => (career.link === this.careerId))[0]
   }
 }
 </script>

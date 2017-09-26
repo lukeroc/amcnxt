@@ -201,9 +201,6 @@ export default {
     if (window.innerWidth >= 920) {
       this.isMobile = false
     }
-  },
-  updated () {
-    this.isDetailsRouteVisible = this.$route.params.isDetailsRouteVisible
   }
 }
 </script>
