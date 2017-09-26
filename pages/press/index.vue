@@ -1,8 +1,8 @@
 <template>
   <a-article
     title="Maltese startup to showcase Amico, a friendly AI character, at ZEST 2017"
-    featuredImage="hero-background-press.png"
-    featuredImageMob="hero-background-press-mob.png"
+    featuredImage="press-hero-background.png"
+    featuredImageMob="press-hero-background-mob.png"
     publishDate="06 September 2017">
 
     <div slot="a-article-content" class="content-wrapper">
@@ -91,7 +91,7 @@ export default {
       {
         hid: 'ogImage',
         property: 'og:image',
-        content: 'https://amico.ai/static/images/social-press.jpg'
+        content: 'https://amico.ai/static/images/press-social.jpg'
       },
       {
         hid: 'ogImageAlt',

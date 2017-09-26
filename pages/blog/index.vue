@@ -2,8 +2,8 @@
 
   <a-article
     title="Why your future best friend may be a charming robot"
-    featuredImage="hero-background-blog.png"
-    featuredImageMob="hero-background-blog-mob.png"
+    featuredImage="blog-hero-background.png"
+    featuredImageMob="blog-hero-background-mob.png"
     publishDate="11 September 2017">
 
     <div slot="a-article-content" class="content-wrapper">
@@ -156,7 +156,7 @@ export default {
       {
         hid: 'ogImage',
         property: 'og:image',
-        content: 'https://amico.ai/static/images/social-blog.png'
+        content: 'https://amico.ai/static/images/blog-social.png'
       },
       {
         hid: 'ogImageAlt',

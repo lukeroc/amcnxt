@@ -10,7 +10,7 @@
         <div class="a-unsupported-content">
           <div class="a-image-content">
             <div class="a-amico-sad">
-              <img alt="Sad Amico illustration" src="~/static/images/amico-sad.svg">
+              <img alt="Sad Amico illustration" src="~/static/images/browser-support-amico-sad.svg">
             </div>
           </div>
           <div class="a-text-content">
@@ -26,7 +26,9 @@
             <ul class="a-browsers">
               <li v-for="browser in BROWSERS" class="a-browser">
                 <a class="a-browser-link" :href="browser.link" target="_blank" rel="noopener">
-                  <span class="a-browser-icon" v-html="browser.icon"></span>
+                  <span class="a-browser-icon">
+                    <img :src="`/static/images/browser-support-${browser.icon}.svg`" :alt="`${browser.name1} Logo`">
+                  </span>
                   <span class="a-browser-name">
                     {{ browser.name1 }} <br>
                     {{ browser.name2 }}
