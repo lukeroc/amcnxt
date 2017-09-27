@@ -35,6 +35,7 @@
               <div id="mc_embed_signup_scroll">
 
                 <div class="mc-field-group">
+                  <label for="mce-EMAIL" style="position: absolute; opacity: 0">SEND</label>
                   <input
                     @focus="isInputFocused = true"
                     @blur="isInputFocused = false"

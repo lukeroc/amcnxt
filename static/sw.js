@@ -31,8 +31,8 @@ const fileManifest = [
     "revision": "6cc86ed26b5939d46900146ae57efaef"
   },
   {
-    "url": "/_nuxt/manifest.29aa20c0b58d95b26d8e.js",
-    "revision": "8ed9cea5bd09e855c556155d4fe3ad57"
+    "url": "/_nuxt/manifest.ee3fd7af045ea9b34bef.js",
+    "revision": "c73f7f381e2d8d86bcfdc82f4acf87d7"
   },
   {
     "url": "/_nuxt/pages/blog/index.f2107d53f3520a2013dd.js",
@@ -47,16 +47,16 @@ const fileManifest = [
     "revision": "866b713158c9742330edc7e071a6380f"
   },
   {
-    "url": "/_nuxt/pages/index.7b95c13ef441a43aeed3.js",
-    "revision": "66e32b17db4f8d5a5ca4280ded90b07b"
+    "url": "/_nuxt/pages/index.f1ab30d1016bef57ff1b.js",
+    "revision": "0aabe77ffd620b583cae15db0eee8b4e"
   },
   {
     "url": "/_nuxt/pages/landing-page/AmicoConnect.4ebdf1a5ae2d11b64c59.js",
     "revision": "6cd160cd7ce25cf8f47eb45dd4c530bb"
   },
   {
-    "url": "/_nuxt/pages/landing-page/DownloadApp.a0ac20cb60a37d481344.js",
-    "revision": "88d1cba75003e37cf3e3730f3873ae43"
+    "url": "/_nuxt/pages/landing-page/DownloadApp.42107d5c51bac0d0de51.js",
+    "revision": "9ad6cfd10517dd5e55f82c79adda193e"
   },
   {
     "url": "/_nuxt/pages/landing-page/MeetAmico.7f2fb8a045268fe2eed2.js",
