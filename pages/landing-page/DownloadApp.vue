@@ -57,7 +57,7 @@
                 <div class="mc-submit-container clear">
                   <input type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe" class="button">
                 </div>
-                <a class="send-plane" href="#">
+                <a aria-label="Submit News Letter Registration" class="send-plane" href="javascript:void(0);">
                   <svg viewBox="0 0 19 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"> <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g :class="{'is-focused': isInputFocused}" class="plane-path" id="Footer---D" transform="translate(-1255.000000, -156.000000)" fill="#4A4A4A"> <g id="Col-4-X4"> <g transform="translate(930.000000, 51.000000)"> <g id="Input-Field" transform="translate(0.000000, 94.000000)"> <path d="M325,20.375 L330.417143,22.25 L331.094285,28.5 L334.48,24.125 L339.219999,28.5 L343.959999,11 L325,20.375 L325,20.375 Z M338.487839,26.0546871 L334.48,22.25 L339.897142,15.375 L331.771428,21.3828125 L328.275678,20.171875 L341.903178,13.4335938 L338.487839,26.0546871 L338.487839,26.0546871 Z" id="Submit-email"></path> </g> </g> </g> </g> </g></svg>
                 </a>
               </div>
