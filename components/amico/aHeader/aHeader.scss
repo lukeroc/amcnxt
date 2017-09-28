@@ -1,0 +1,24 @@
+.a-header {
+  position: relative;
+
+  &.home-header {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+
+    @media (min-width: 920px) {
+      display: block;
+    }
+
+    .a-menu {
+      position: relative;
+      top: auto;
+      bottom: auto;
+
+      @media (min-width: 920px) {
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+}

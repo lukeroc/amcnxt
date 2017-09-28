@@ -1,0 +1,46 @@
+// ======= triangles ==================
+@mixin triangle($direction, $size, $color) {
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+  z-index: 2;
+
+  @if $direction == up {
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    transform: translateY(-100%);
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-bottom: $size solid $color;
+  } @else if $direction == right {
+    top: auto;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    transform: translateX(100%);
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  } @else if $direction == down {
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: auto;
+    transform: translateY(100%);
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  } @else if $direction == left {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    transform: translateX(-100%);
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right:$size solid $color;
+  }
+}

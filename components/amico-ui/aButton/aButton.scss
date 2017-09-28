@@ -1,0 +1,167 @@
+// ===== IMPORTS ======================
+@import '../../../assets/scss/base/variables';
+@import '../../../assets/scss/base/mixins/all';
+
+// ======= BUTTONS DEFAULT ============
+$button-default-width-xs: 120px !default;
+$button-default-width-sm: 144px !default;
+$button-default-height: 40px !default;
+$button-default-padding: 0 16px !default;
+$button-default-color: #ffffff !default;
+$button-default-font-family: $primary-font !default;
+$button-default-font-size: 16px !default;
+$button-default-font-weight: 700 !default;
+$button-default-line-height: 1 !default;
+$button-default-letter-spacing: 0 !default;
+$button-default-case: none !default;
+$button-default-border: 2px solid transparent !default;
+$button-default-border-radius: 5px !default;
+$button-small-height: 30px !default;
+$button-small-font-size: 12px !default;
+$button-large-width: 180px !default;
+$button-large-height: 50px;
+$button-large-padding: 0 24px !default;
+$button-large-font-size: 18px !default;
+$button-primary-background: $color-primary !default;
+$button-primary-background-hover: lighten($button-primary-background, 12%) !default;
+$button-primary-background-active: darken($button-primary-background, 15%) !default;
+$button-secondary-background: $color-secondary !default;
+$button-secondary-background-hover: lighten($button-secondary-background, 12%) !default;
+$button-secondary-background-active: darken($button-secondary-background, 15%) !default;
+$button-secondary-border-color: transparent !default;
+$button-link-color: $button-secondary-background !default;
+$button-link-color-hover: $button-link-color !default;
+$button-link-color-active: $button-link-color !default;
+$button-link-font-size: 16px !default;
+$button-link-font-weight: 400 !default;
+$button-link-letter-spacing: 0px !default;
+$button-link-decoration: none !default;
+$button-link-decoration-hover: underline !default;
+$button-icon-space: 8px !default;
+
+// ======= BUTTONS ====================
+.a-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: $button-default-font-family;
+  font-size: $button-default-font-size;
+  font-weight: $button-default-font-weight;
+  line-height: $button-default-line-height;
+  letter-spacing: $button-default-letter-spacing;
+  text-transform: $button-default-case;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  cursor: pointer;
+  user-select: none;
+
+  &:not(.a-button-link) {
+    min-width: $button-default-width-xs;
+    height: $button-default-height;
+    padding: $button-default-padding;
+    color: $button-default-color;
+    border: $button-default-border;
+    border-radius: $button-default-border-radius;
+
+    @include MQ(XS) {
+      min-width: $button-default-width-sm;
+    }
+
+    &:visited {
+      color: $button-default-color;
+    }
+
+    .a-button-label {
+      display: inline-block;
+      padding-top: 1px;
+    }
+  }
+
+  // ======= SMALL ====================
+  &.a-button-small {
+    height: $button-small-height;
+    font-size: $button-small-font-size;
+  }
+
+  // ======= LARGE ====================
+  &.a-button-large {
+    min-width: $button-large-width;
+    height: $button-large-height;
+    padding: $button-large-padding;
+    font-size: $button-large-font-size;
+  }
+
+  // ======= PRIMARY ==================
+  &.a-button-primary {
+    background: $button-primary-background;
+
+    &:hover {
+      background: $button-primary-background-hover;
+    }
+
+    &:active {
+      background: $button-primary-background-active;
+    }
+
+    &.a-button-disabled {
+      background: #9b9b9b;
+      color: #686868;
+    }
+  }
+
+  // ======= SECONDARY ================
+  &.a-button-secondary {
+    background: $button-secondary-background;
+    border-color: $button-secondary-border-color;
+
+    &:hover {
+      background: $button-secondary-background-hover;
+    }
+
+    &:active {
+      background: $button-secondary-background-active;
+    }
+
+    &.a-button-disabled {
+      border-color: #9B9B9B;
+    }
+  }
+
+  // ======= LINK =====================
+  &.a-button-link {
+    color: $button-link-color;
+    font-size: $button-link-font-size;
+    font-weight: $button-link-font-weight;
+    letter-spacing: $button-link-letter-spacing;
+    text-decoration: $button-link-decoration;
+
+    &:hover {
+      color: $button-link-color-hover;
+      text-decoration: $button-link-decoration-hover;
+    }
+
+    &:active {
+      color: $button-link-color-active;
+    }
+  }
+
+  // ======= DISABLED =================
+  &.a-button-disabled {
+    color: #686868 !important;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  // ======= ICONS ====================
+  .a-button-icon {
+    line-height: 1;
+
+    &.a-button-icon-left {
+      margin-right: $button-icon-space;
+    }
+
+    &.a-button-icon-right {
+      margin-left: $button-icon-space;
+    }
+  }
+}

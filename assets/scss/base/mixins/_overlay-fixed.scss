@@ -1,0 +1,9 @@
+// ======= FULL FIXED HEIGHT ==========
+@mixin overlay-fixed($width, $z-index) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: $width;
+  height: 100%;
+  z-index: $z-index;
+}

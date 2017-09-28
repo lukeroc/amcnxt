@@ -1,0 +1,24 @@
+// ===== IMPORTS ======================
+@import '../../../../scss/base/variables';
+@import '../../../../scss/base/mixins/all';
+
+// ===== AMICO ACCOUNT DEFAULTS =======
+$amico-disclaimer-font-size: 14px !default;
+$amico-disclaimer-font-weight: 500 !default;
+$amico-disclaimer-line-height: 1 !default;
+
+// ===== AMICO ACCOUNT ================
+.a-amico-container {
+  position: relative;
+  margin-top: 36px;
+  width: 100%;
+  text-align: center;
+
+  .a-amico-disclaimer {
+    color: $color-secondary;
+    font-family: $secondary-font;
+    font-size: $amico-disclaimer-font-size;
+    font-weight: $amico-disclaimer-font-weight;
+    line-height: $amico-disclaimer-line-height;
+  }
+}

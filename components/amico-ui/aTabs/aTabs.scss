@@ -1,0 +1,80 @@
+// ======= TABS DEFAULT ===============
+$tabs-list-height: 46px !default;
+$tabs-list-background: #1e2128 !default;
+$tabs-list-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5) !default;
+$tabs-list-color: #999999 !default;
+$tabs-list-color-selected: #ffffff !default;
+$tabs-list-border: 3px solid transparent !default;
+$tabs-list-border-selected: #ffffff !default;
+$tabs-content-padding: 0 !default;
+
+// ======= TABS =======================
+.a-tabs,
+.a-tabs-list,
+.a-tabs-content {
+  display: block;
+  width: 100%;
+}
+
+// ======= TABS LIST ==================
+.a-tabs-list {
+  height: $tabs-list-height;
+
+  .a-tab-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100%;
+    line-height: $tabs-list-height;
+    background: $tabs-list-background;
+    box-shadow: $tabs-list-shadow;
+
+    .a-tab {
+      height: $tabs-list-height;
+      flex-grow: 1;
+      color: $tabs-list-color;
+      text-align: center;
+      border-bottom: $tabs-list-border;
+      cursor: pointer;
+
+      &.is-active {
+        color: $tabs-list-color-selected;
+        border-bottom-color: $tabs-list-border-selected;
+      }
+
+      > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+// ======= TABS CONTENT ===============
+.a-tabs-content {
+  padding: $tabs-content-padding;
+}
+
+// ======= CONETNT TABS ===============
+.a-tabs {
+  .a-tabs-list {
+    &.a-tabs-list-contained {
+      .a-tab-list {
+        background: none;
+        box-shadow: none;
+        border-bottom: 1px solid white;
+
+        .a-tab {
+          color: #858585;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 15px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}

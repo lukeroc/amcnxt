@@ -1,0 +1,55 @@
+// ===== IMPORTS ======================
+@import '../assets/scss/base/variables';
+@import '../assets/scss/base/mixins/all';
+
+
+// HEADER
+.a-landing-page {
+  padding-top: 0 !important;
+
+  .a-content-wrapper {
+    .content {
+      &.a-wwd-section,
+      &.a-ma-section,
+      &.a-ac-section {
+        .split-content-title,
+        .split-content-separator,
+        .split-content-paragraph,
+        .split-content-image {
+          opacity: 0;
+        }
+      }
+
+      &.a-wwd-section,
+      &.a-ac-section {
+        .split-content {
+          @include MQ(MD) {
+            flex-direction: row-reverse;
+
+            .image-content {
+              padding-left: 0;
+            }
+
+            .text-content {
+              padding-right: 0;
+            }
+          }
+        }
+      }
+
+      &.a-ma-section {
+        .split-content {
+          @include MQ(MD) {
+            .image-content {
+              padding-right: 0;
+            }
+
+            .text-content {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

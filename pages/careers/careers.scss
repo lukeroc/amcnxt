@@ -1,0 +1,209 @@
+// ===== IMPORTS ======================
+@import '../../assets/scss/base/variables';
+@import '../../assets/scss/base/mixins/all';
+
+
+// INTRO
+.a-careers-intro {
+  background: url('/static/images/hero-pattern-mob.png') $color-secondary no-repeat;
+  background-position: top right;
+  background-size: cover;
+
+  @include MQ(MD) {
+    height: 320px;
+    background: url('/static/images/hero-pattern.png') $color-secondary no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .contained-content {
+    @media (max-width: 919px) {
+      padding: 0;
+    }
+
+    @include MQ(MD) {
+      position: relative;
+    }
+  }
+
+  .a-intro-title {
+    padding-top: 38px;
+    color: $color-light;
+    text-align: center;
+
+    @include MQ(MD) {
+      padding-top: 44px;
+    }
+  }
+}
+
+// COMPANY VALUES
+.a-company-values {
+  padding-top: 40px;
+
+  @include MQ(MD) {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+    position: absolute;
+    top: 142%;
+    max-width: 1140px;
+    z-index: 2;
+  }
+
+  .a-company-value {
+    margin: 0 16px;
+    height: 507px;
+    padding: 32px 24px;
+    background: white;
+    border-radius: 2px;
+    text-align: center;
+    box-shadow: 0 0 6px 1px rgba(0,0,0,0.051);
+    overflow: hidden;
+
+    @media (min-width: 360px) and (max-width: 479px) {
+      height: 444px;
+    }
+
+    @media (min-width: 480px) and (max-width: 599px) {
+      height: 402px;
+    }
+
+    @media (min-width: 600px) {
+      height: 360px;
+    }
+
+    @media (min-width: 768px) {
+      height: 444px;
+    }
+
+    @include MQ(MD) {
+      flex-basis: 33.33333%;
+      margin: 0;
+      height: 500px;
+    }
+
+    @include MQ(LG) {
+      height: 468px;
+    }
+
+    @include MQ(XL) {
+      height: 444px;
+    }
+
+    &:nth-child(2) {
+      margin: 0 16px;
+
+
+      @include MQ(XL) {
+        margin: 0 32px;
+      }
+    }
+
+    &:nth-child(3) {
+      margin-right: 16px;
+    }
+
+    .a-value-header {
+      .a-value-icon {
+        margin-bottom: 24px;
+        height: 88px;
+      }
+
+      .a-value-title {
+        margin-bottom: 32px;
+      }
+    }
+
+    .a-value-content {
+      .a-value-body {
+        margin-bottom: 24px;
+        color: #7a7a7a;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .VueCarousel-pagination {
+    float: none !important;
+
+    .VueCarousel-dot {
+      margin: 12px 0 8px !important;
+    }
+  }
+}
+
+// OPENINGS
+.a-career-openings {
+  @include MQ(MD) {
+    padding: 280px 16px 72px !important;
+  }
+
+  @include MQ(XL) {
+    padding: 264px 16px 72px !important;
+  }
+
+  .content-header {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 20px;
+
+    @include MQ(MD) {
+      margin: 64px 0 24px;
+    }
+  }
+}
+
+.a-openings {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 768px;
+
+  .a-opening {
+    margin-bottom: 8px;
+    height: 70px;
+    background: $color-light;
+    border-radius: 2px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      box-shadow: 0 0 6px 0 rgba(0,0,0,0.2);
+
+      .a-opening-link {
+        text-decoration: none;
+      }
+    }
+
+    .a-opening-link {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      height: 100%;
+      padding: 0 16px;
+      border-radius: 2px;
+
+      @include MQ(MD) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 80px;
+
+        .strong {
+          flex-basis: 60%;
+        }
+
+        .x-small {
+          flex-basis: 40%;
+          text-align: right;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+// ===== IMPORTS ======================
+@import '../../../scss/base/variables';
+@import '../../../scss/base/mixins/all';
+
+
+// ======= ACCORDION DEFAULT ==========
+$accordion-gutter: 8px !default;
+$accordion-border: 1px solid #9B9B9B !default;
+$accordion-border-radius: 5px !default;
+$accordion-icon: "+" !default;
+$accordion-icon-animation: rotate(225deg) !default;
+$accodion-panel-height: 16em !default;
+$accordion-label-color: $font-color-primary !default;
+
+// ======= ACCORDION ==================
+.a-accordion {
+  position: relative;
+  margin-bottom: $accordion-gutter;
+  width: 100%;
+  border: $accordion-border;
+  border-radius: $accordion-border-radius;
+  text-align: left;
+  overflow: hidden;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  .a-accordion-input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+
+    &:checked ~ .a-accordion-content {
+      max-height: $accodion-panel-height;
+      padding: $accordion-gutter;
+    }
+
+    & + label:after {
+      content: $accordion-icon;
+    }
+
+    &:checked + label {
+      color: $accordion-label-color;
+    }
+
+    &:checked + label:after {
+      transform: $accordion-icon-animation;
+    }
+  }
+
+  .a-accordion-label {
+    position: relative;
+    display: block;
+    padding: $accordion-gutter;
+    color: $grey-primary;
+    font-family: $primary-font;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: $accordion-gutter;
+      width: 6px;
+      height: 10px;
+      line-height: 1;
+      margin-top: -5px;
+      transition: transform 0.3s;
+    }
+  }
+
+  .a-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+
+    p {
+      font-family: $alternate-font;
+    }
+  }
+}
